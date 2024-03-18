@@ -43,3 +43,49 @@ from transformers import AutoTokenizer
 from transformers import AutoModelForCausalLM
 import transformers
 import torch
+
+## Loading Llama2 Model
+
+# Define the model name
+model = "meta-llama/Llama-2-7b-chat-hf"
+
+# Load tokenizer
+tokenizer = AutoTokenizer.from_pretrained(model)
+
+# Load model pipeline
+pipeline = transformers.pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    torch_dtype=torch.bfloat16,
+    trust_remote_code=True,
+    device_map="auto",
+    max_length=1000,
+    do_sample=True,
+    top_k=10,
+    num_return_sequences=1,
+    eos_token_id=tokenizer.eos_token_id
+)
+
+## Initializing Llama2 Pipeline
+
+llm = HuggingFacePipeline(pipeline=pipeline, model_kwargs={'temperature': 0})
+
+## Generating Text
+
+# Define prompt
+prompt = "What would be a good name for a company that makes colorful socks"
+
+# Generate response
+print(llm(prompt))
+
+# Define prompt for Indian restaurant name suggestion
+prompt = "I want to open a restaurant for Indian food. Suggest me a name for this."
+
+# Generate restaurant name suggestion
+print(llm(prompt))
+
+## Conclusion
+
+Open-LLMs, particularly leveraging Llama2, provides a powerful platform for text generation tasks. With easy access to state-of-the-art language models, you can accomplish various natural language processing tasks effectively. Explore further possibilities and enjoy using Open-LLMs for your projects!
+
