@@ -1,5 +1,11 @@
 # Open-LLMs Documentation
 
+## Goal 
+
+Utilized the Llama2 model, which is one of the models available in the Open-LLMs repository. Created a tool that leverages the Llama2 model for text generation tasks.
+
+While Llama2 can be used for chat-like interactions, it's essential to note that the provided code snippet demonstrates how to utilize the model for generating text based on specific prompts. It's not a fully-fledged chatbot system out-of-the-box. However, with appropriate integration and further development, you could potentially build a chatbot system using Llama2 or similar models provided by Open-LLMs.
+
 ## Introduction
 
 Open-LLMs is a collection of language models and tools designed to facilitate various natural language processing tasks. In this document, we'll discuss how to utilize Open-LLMs for text generation tasks using Llama2, a powerful conversational AI model.
