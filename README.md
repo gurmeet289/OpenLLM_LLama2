@@ -84,8 +84,8 @@ prompt = "I want to open a restaurant for Indian food. Suggest me a name for thi
 
 # Generate restaurant name suggestion
 print(llm(prompt))
-
-**## Conclusion**
+```
+## Conclusion
 
 Open-LLMs, particularly leveraging Llama2, provides a powerful platform for text generation tasks with easy access to state-of-the-art language models, you can accomplish various natural language processing tasks effectively.
 Explore further possibilities and enjoy using Open-LLMs for your projects!
